@@ -74,7 +74,6 @@ public class Jwt {
             }
 
             httpClient.close();
-            //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
 
         } catch (Exception e) {
             e.printStackTrace();
