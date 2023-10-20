@@ -9,13 +9,17 @@ import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.RuleResult;
 
+import javax.annotation.processing.Generated;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 
 public class PasGenerator {
-    public static void main(String[] args) {
+    private static String Generate() {
         PasswordGenerator passwordGenerator = new PasswordGenerator();
 
         // Правила генерации
@@ -33,6 +37,7 @@ public class PasGenerator {
                 }
             }
         );
+
         String password = passwordGenerator.generatePassword(10, Arrays.asList(
                 upperCaseRule,
                 lowerCaseRule,
@@ -40,30 +45,33 @@ public class PasGenerator {
                 specialCharRule
         ));
         System.out.println("Password: " + password);
+        return password;
     }
 
-    public static void UpdatePass(String[] args) {
+    public static void UpdatePass() {
         try {
-            // Загрузить JSON из файла
+            // JSON файл
             Path cluster = Path.of(ClassLoader.getSystemResource("cluster_creation_data.json").toURI());
-            String jsonContent = Files.readString(jsonFilePath);
+            String jsonContent = Files.readString(cluster);
 
-            // Создать ObjectMapper для работы с JSON
+            // ObjectMapper для работы с JSON
             ObjectMapper objectMapper = new ObjectMapper();
 
-            // Разобрать JSON
+            // "Разборка" JSON
             JsonNode jsonNode = objectMapper.readTree(jsonContent);
 
-            // Получить объект "userSpecs"
+            // Получение объект "userSpecs"
             ObjectNode userSpecsNode = (ObjectNode) jsonNode.at("/userSpecs/0");
 
-            // Заменить значение поля "password" на сгенерированный пароль
-            String generatedPassword = generatePassword(); // Здесь должен быть ваш код генерации пароля
+            // Замена "password" на сгенерированный пароль
+            String generatedPassword = Generate();
             userSpecsNode.put("password", generatedPassword);
+            System.out.println("Json\n" + userSpecsNode);
 
-            // Записать обновленный JSON обратно в файл
-            Files.writeString(jsonFilePath, objectMapper.writeValueAsString(jsonNode));
-        } catch (IOException e) {
+            // Запись обратно в файл
+            Files.writeString(cluster, objectMapper.writeValueAsString(jsonNode));
+            System.out.println("Json\n" + jsonNode);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

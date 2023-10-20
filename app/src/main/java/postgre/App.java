@@ -13,42 +13,8 @@ import org.apache.http.entity.StringEntity;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        // �������� �� ��� API ����
-        postgre.Jwt.main(args);
-        String apiKey = "���_API_����";
-//
-//        // URL ��� �������� ��������
-        String createClusterURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters";
-//
-//        // JSON-������������� ������ ��� �������� ��������
-//
-//
-//        try {
-//            String jsonBody = new String(Files.readAllBytes(Paths.get("cluster_creation_data.json")));
-//            CloseableHttpClient httpClient = HttpClients.createDefault();
-//            HttpPost httpPost = new HttpPost(createClusterURL);
-//
-//            // ��������� ���������� � ���� �������
-//            httpPost.setHeader("Content-Type", "application/json");
-//            httpPost.setHeader("Authorization", "Api-Key " + apiKey);
-//            httpPost.setEntity(new StringEntity(jsonBody));
-//
-//            // ���������� �������
-//            CloseableHttpResponse response = httpClient.execute(httpPost);
-//            HttpEntity entity = response.getEntity();
-//            String responseString = EntityUtils.toString(entity);
-//
-//            // ��������� ������
-//            if (response.getStatusLine().getStatusCode() == 200) {
-//                System.out.println("������� PostgreSQL ������� ������.");
-//            } else {
-//                System.err.println("������: " + responseString);
-//            }
-//
-//            httpClient.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+//        postgre.Jwt.main(args);
+        postgre.PasGenerator.UpdatePass();
     }
 
     Object getGreeting() {
