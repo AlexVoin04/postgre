@@ -1,0 +1,58 @@
+{
+  "folderId": "b1ggaqs441crdco4j4it",
+  "name": "test-pg",
+  "description": "test",
+  "labels": {},
+  "environment": "PRODUCTION",
+  "networkId": "enpctngasilslbagno5p",
+  "configSpec": {
+    "version": "15",
+    "resources": {
+      "resourcePresetId": "s3-c2-m8",
+      "diskSize": 10737418240,
+      "diskTypeId": "network-ssd"
+    },
+    "autofailover": true,
+    "backupWindowStart": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 0,
+      "nanos": 0
+    },
+    "backupRetainPeriodDays": 7,
+    "performanceDiagnostics": {
+      "enabled": false,
+      "sessionsSamplingInterval": 10,
+      "statementsSamplingInterval": 600
+    }
+  },
+  "hostSpecs": [
+    {
+      "zoneId": "ru-central1-b",
+      "subnetId": "e2ll2959l4rmhucfg4si",
+      "assignPublicIp": false
+    }
+  ],
+  "databaseSpecs": [
+    {
+      "name": "bd-pg",
+      "owner": "user-pg",
+      "lcCtype": "C",
+      "lcCollate": "C"
+    }
+  ],
+  "userSpecs": [
+    {
+      "name": "user-pg",
+      "password": "70-Fz82-d4"
+    }
+  ],
+
+  "access": {
+    "dataTransfer": true,
+    "serverless": true
+  },
+  "networkSettings": {
+    "type": "default"
+  }
+}

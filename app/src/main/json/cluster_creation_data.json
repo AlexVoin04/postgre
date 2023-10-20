@@ -1,0 +1,41 @@
+{
+  "folderId": "b1ggaqs441crdco4j4it",
+  "name": "test-pg", 
+  "environment": "PRODUCTION",
+  "networkId": "enpctngasilslbagno5p",
+  "configSpec": {
+    "version": "15", 
+    "resources": {
+      "resourcePresetId": "s3-c12-m48", 
+      "diskSize": 10000000000, 
+      "storageType": "network-ssd"
+    }
+  },
+  "hostSpecs": [
+    {
+      "zoneId": "zone-b",
+      "subnetId": "subnet-b",
+      "assignPublicIp": true
+    }
+  ],
+  "databaseSpecs": [
+    {
+      "name": "bd-pg" 
+    }
+  ],
+  "userSpecs": [
+    {
+      "name": "user-pg", 
+      "password": "70-Fz82-d4",
+      "lcCollate": "C",
+      "lcCtype": "C"
+    }
+  ],
+  "access": {
+    "dataTransfer": true,
+    "serverless": true
+  },
+  "networkSettings": {
+    "type": "default"
+  }
+}
