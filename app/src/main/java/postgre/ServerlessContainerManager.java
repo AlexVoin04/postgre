@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package postgre;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,23 +9,17 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-
 import postgre.model.*;
 import yandex.cloud.sdk.auth.Auth;
 import yandex.cloud.sdk.auth.IamToken;
 import yandex.cloud.sdk.auth.provider.CredentialProvider;
 
-import java.util.Map;
+import java.nio.file.Path;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.nio.file.Path;
 
-/**
- *
- * @author Alex
- */
-public class Jwt {
+public class ServerlessContainerManager {
     public static void main(String[] args) throws Exception {
         Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
         CredentialProvider provider2 = Auth.apiKeyBuilder()
@@ -40,11 +30,11 @@ public class Jwt {
         System.out.println("JWT Token: " + iamToken.getToken());
 
         String apiKey = iamToken.getToken();
-        String createClusterURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters";
+        String createClusterURL = "https://serverless-containers.api.cloud.yandex.net/containers/v1/containers";
 
         try {
             Haikunator haikunator = new Haikunator();
-            String jsonBody = CreateJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
+            String jsonBody = CreateJsonBody(haikunator.haikunate());
             CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost(createClusterURL);
 
@@ -57,8 +47,7 @@ public class Jwt {
             String responseString = EntityUtils.toString(entity);
 
             if (response.getStatusLine().getStatusCode() == 200) {
-                System.out.println("PostgreSQL:\n" +responseString);
-                Shedule(responseString, apiKey);
+                System.out.println("ServerlessContainer:\n" +responseString);
             } else {
                 System.err.println(responseString);
             }
@@ -68,54 +57,23 @@ public class Jwt {
         }
     }
 
-    public static String CreateJsonBody(String name, String description, String userName, String userPassword){
+    public static String CreateJsonBody(String name){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            MyCluster jsonData = new MyCluster(
+            MyServerlessContainer jsonData = new MyServerlessContainer(
                     "b1ggaqs441crdco4j4it",
-                    name,
-                    description,
-                    Map.of(),
-                    "PRESTABLE",
-                    "enpctngasilslbagno5p",
-                    new MyConfigSpec(
-                            "15",
-                            new MyResources("s3-c2-m8", 10737418240L, "network-ssd"),
-                            true,
-                            new MyBackupWindowStart(0, 0, 0, 0),
-                            7,
-                            new MyPerformanceDiagnostics(false, 10, 600)
-                    ),
-                    new MyHostSpecs[] {
-                            new MyHostSpecs(
-                                    "ru-central1-b",
-                                    "e2ll2959l4rmhucfg4si",
-                                    false
-                            )
-                    },
-                    new MyDatabaseSpecs[] {
-                            new MyDatabaseSpecs(
-                                    "bd-pg",
-                                    userName,
-                                    "C",
-                                    "C"
-                            )
-                    },
-                    new MyUserSpecs[] {
-                            new MyUserSpecs(
-                                    userName,
-                                    userPassword
-                            )
-                    },
-                    new MyAccess(true, true),
-                    new MyNetworkSettings("default")
+                    "ru-central1",
+                    name
             );
-
             return objectMapper.writeValueAsString(jsonData);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String DeployRevision(String apiKey, String response){
+        return "";
     }
     public static void Shedule(String response, String key) {
         // планировщик с одним потоком
