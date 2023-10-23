@@ -23,7 +23,6 @@ import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
@@ -45,20 +44,17 @@ public class Jwt {
 
         try {
             Haikunator haikunator = new Haikunator();
-            String jsonBody = CreateJsonBody("b1ggaqs441crdco4j4it", haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
+            String jsonBody = CreateJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
             CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost(createClusterURL);
-
 
             httpPost.setHeader("Content-Type", "application/json");
             httpPost.setHeader("Authorization", "Bearer " + apiKey);
             httpPost.setEntity(new StringEntity(jsonBody));
 
-
             CloseableHttpResponse response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
             String responseString = EntityUtils.toString(entity);
-
 
             if (response.getStatusLine().getStatusCode() == 200) {
                 System.out.println("PostgreSQL:\n" +responseString);
@@ -66,23 +62,21 @@ public class Jwt {
             } else {
                 System.err.println(responseString);
             }
-
             httpClient.close();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static String CreateJsonBody(String folderId, String name, String description, String userName, String userPassword){
+    public static String CreateJsonBody(String name, String description, String userName, String userPassword){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             MyCluster jsonData = new MyCluster(
-                    folderId,
+                    "b1ggaqs441crdco4j4it",
                     name,
                     description,
                     Map.of(),
-                    "PRODUCTION",
+                    "PRESTABLE",
                     "enpctngasilslbagno5p",
                     new MyConfigSpec(
                             "15",
@@ -102,15 +96,15 @@ public class Jwt {
                     new MyDatabaseSpecs[] {
                             new MyDatabaseSpecs(
                                     "bd-pg",
-                                    "user-pg",
+                                    userName,
                                     "C",
                                     "C"
                             )
                     },
                     new MyUserSpecs[] {
                             new MyUserSpecs(
-                                    "user-pg",
-                                    "70-Fz82-d"
+                                    userName,
+                                    userPassword
                             )
                     },
                     new MyAccess(true, true),
@@ -130,6 +124,6 @@ public class Jwt {
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
         // задача для пулинга состояния кластера каждые 15 секунд
-        scheduler.scheduleAtFixedRate(new ClusterAvailabilityChecker(response, key, scheduler), 0, 15, TimeUnit.SECONDS);
+        scheduler.scheduleAtFixedRate(new ClusterAvailabilityChecker(response, key), 15, 15, TimeUnit.SECONDS);
     }
 }

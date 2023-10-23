@@ -49,7 +49,7 @@ public class PasGenerator {
         return password;
     }
 
-    public static void UpdatePass() {
+    public static void UpdatePassInJson() {
         try {
             // JSON файл
             Path cluster = Path.of(ClassLoader.getSystemResource("cluster_creation_data.json").toURI());

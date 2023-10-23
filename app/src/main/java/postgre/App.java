@@ -24,10 +24,9 @@ import static postgre.Jwt.CreateJsonBody;
 public class App {
 
     public static void main(String[] args) throws Exception {
-//        postgre.Jwt.main(args);
-//        postgre.PasGenerator.UpdatePass();
+
 //        Haikunator haikunator = new Haikunator();
-//        String jsonBody = CreateJsonBody("b1ggaqs441crdco4j4it", haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
+//        String jsonBody = CreateJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
 //        System.out.println("PostgreSQL:\n" +jsonBody);
         Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
         CredentialProvider provider2 = Auth.apiKeyBuilder()
@@ -36,7 +35,7 @@ public class App {
         IamToken iamToken = provider2.get();
         String apiKey = iamToken.getToken();
         String test = "{\n" +
-                "  \"id\": \"c9quhc1loqvddjmr42c9\",\n" +
+                "  \"id\": \"c9qsnjbtv7vgkp9lhiv1\",\n" +
                 "  \"description\": \"string\",\n" +
                 "  \"createdAt\": \"string\",\n" +
                 "  \"createdBy\": \"string\",\n" +

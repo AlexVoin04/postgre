@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98d0d78f-d2a9-4276-88a7-95014a85c8b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyBackupWindowStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyCluster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyConfigSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyDatabaseSpecs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyHostSpecs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyNetworkSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyPerformanceDiagnostics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/MyUserSpecs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/PasGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/PasGenerator.java" afterDir="false" />
     </list>
@@ -76,7 +64,20 @@
       <recent name="$PROJECT_DIR$/app/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Jwt">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="postgre.App" />
+      <module name="postgre.app.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="postgre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Jwt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="postgre.Jwt" />
       <module name="postgre.app.main" />
@@ -92,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Jwt" />
       </list>
     </recent_temporary>
