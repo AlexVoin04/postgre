@@ -27,6 +27,7 @@ dependencies {
     implementation 'org.passay:passay:1.6.0'
     implementation 'com.yandex.cloud:java-sdk-services:2.6.4'
     implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'me.atrox.haikunator:Haikunator:2.0.1'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

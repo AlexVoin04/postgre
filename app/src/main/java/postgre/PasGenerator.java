@@ -8,6 +8,7 @@ import org.passay.PasswordData;
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.RuleResult;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.annotation.processing.Generated;
 import java.io.File;
@@ -19,7 +20,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 
 public class PasGenerator {
-    private static String Generate() {
+    public static String Generate() {
         PasswordGenerator passwordGenerator = new PasswordGenerator();
 
         // Правила генерации
@@ -27,15 +28,15 @@ public class PasGenerator {
         CharacterRule lowerCaseRule = new CharacterRule(EnglishCharacterData.LowerCase, 1);
         CharacterRule digitRule = new CharacterRule(EnglishCharacterData.Digit, 1);
         CharacterRule specialCharRule = new CharacterRule(
-            new CharacterData() {
-                public String getErrorCode() {
-                    return "ERROR_CODE";
-                }
+                new CharacterData() {
+                    public String getErrorCode() {
+                        return "ERROR_CODE";
+                    }
 
-                public String getCharacters() {
-                    return "!@#$%^&*_-/.<>|";
+                    public String getCharacters() {
+                        return "!@#$%^&*_-/.<>|";
+                    }
                 }
-            }
         );
 
         String password = passwordGenerator.generatePassword(10, Arrays.asList(
@@ -69,10 +70,12 @@ public class PasGenerator {
             System.out.println("Json\n" + userSpecsNode);
 
             // Запись обратно в файл
-            Files.writeString(cluster, objectMapper.writeValueAsString(jsonNode));
+            Files.writeString(cluster, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonNode));
             System.out.println("Json\n" + jsonNode);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
 }

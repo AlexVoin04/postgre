@@ -3,10 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package postgre;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import java.io.BufferedReader;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import me.atrox.haikunator.Haikunator;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -14,25 +13,19 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.bouncycastle.util.io.pem.PemObject;
-import org.bouncycastle.util.io.pem.PemReader;
+
+import postgre.model.*;
 import yandex.cloud.sdk.auth.Auth;
 import yandex.cloud.sdk.auth.IamToken;
 import yandex.cloud.sdk.auth.provider.CredentialProvider;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.FileReader;
-import java.io.Reader;
+import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.security.KeyFactory;
-import java.security.PrivateKey;
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.time.Instant;
-import java.util.Date;
+
 /**
  *
  * @author Alex
@@ -51,8 +44,8 @@ public class Jwt {
         String createClusterURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters";
 
         try {
-            Path cluster = Path.of(ClassLoader.getSystemResource("cluster_creation_data.json").toURI());
-            String jsonBody = new String(Files.readAllBytes(cluster));
+            Haikunator haikunator = new Haikunator();
+            String jsonBody = CreateJsonBody("b1ggaqs441crdco4j4it", haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
             CloseableHttpClient httpClient = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost(createClusterURL);
 
@@ -68,7 +61,8 @@ public class Jwt {
 
 
             if (response.getStatusLine().getStatusCode() == 200) {
-                System.out.println("PostgreSQL\n" +responseString);
+                System.out.println("PostgreSQL:\n" +responseString);
+                Shedule(responseString, apiKey);
             } else {
                 System.err.println(responseString);
             }
@@ -78,5 +72,64 @@ public class Jwt {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String CreateJsonBody(String folderId, String name, String description, String userName, String userPassword){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            MyCluster jsonData = new MyCluster(
+                    folderId,
+                    name,
+                    description,
+                    Map.of(),
+                    "PRODUCTION",
+                    "enpctngasilslbagno5p",
+                    new MyConfigSpec(
+                            "15",
+                            new MyResources("s3-c2-m8", 10737418240L, "network-ssd"),
+                            true,
+                            new MyBackupWindowStart(0, 0, 0, 0),
+                            7,
+                            new MyPerformanceDiagnostics(false, 10, 600)
+                    ),
+                    new MyHostSpecs[] {
+                            new MyHostSpecs(
+                                    "ru-central1-b",
+                                    "e2ll2959l4rmhucfg4si",
+                                    false
+                            )
+                    },
+                    new MyDatabaseSpecs[] {
+                            new MyDatabaseSpecs(
+                                    "bd-pg",
+                                    "user-pg",
+                                    "C",
+                                    "C"
+                            )
+                    },
+                    new MyUserSpecs[] {
+                            new MyUserSpecs(
+                                    "user-pg",
+                                    "70-Fz82-d"
+                            )
+                    },
+                    new MyAccess(true, true),
+                    new MyNetworkSettings("default")
+            );
+
+            String jsonString = objectMapper.writeValueAsString(jsonData);
+
+            return jsonString;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public static void Shedule(String response, String key) {
+        // планировщик с одним потоком
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+        // задача для пулинга состояния кластера каждые 15 секунд
+        scheduler.scheduleAtFixedRate(new ClusterAvailabilityChecker(response, key, scheduler), 0, 15, TimeUnit.SECONDS);
     }
 }
