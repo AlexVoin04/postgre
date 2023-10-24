@@ -19,9 +19,12 @@ import yandex.cloud.sdk.auth.Auth;
 import yandex.cloud.sdk.auth.IamToken;
 import yandex.cloud.sdk.auth.provider.CredentialProvider;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.nio.file.Path;
 
@@ -41,11 +44,11 @@ public class Jwt {
 
         String apiKey = iamToken.getToken();
         String createClusterURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters";
-
+        CloseableHttpClient httpClient = null;
         try {
             Haikunator haikunator = new Haikunator();
             String jsonBody = CreateJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
-            CloseableHttpClient httpClient = HttpClients.createDefault();
+            httpClient = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost(createClusterURL);
 
             httpPost.setHeader("Content-Type", "application/json");
@@ -62,9 +65,16 @@ public class Jwt {
             } else {
                 System.err.println(responseString);
             }
-            httpClient.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            try {
+                if (httpClient != null) {
+                    httpClient.close();
+                }
+            } catch (IOException e) {
+                System.err.println("IOException JWT.main: " + e.getMessage());
+            }
         }
     }
 
@@ -86,27 +96,27 @@ public class Jwt {
                             7,
                             new MyPerformanceDiagnostics(false, 10, 600)
                     ),
-                    new MyHostSpecs[] {
+                    List.of(
                             new MyHostSpecs(
                                     "ru-central1-b",
                                     "e2ll2959l4rmhucfg4si",
                                     false
                             )
-                    },
-                    new MyDatabaseSpecs[] {
+                    ),
+                    List.of(
                             new MyDatabaseSpecs(
                                     "bd-pg",
                                     userName,
                                     "C",
                                     "C"
                             )
-                    },
-                    new MyUserSpecs[] {
+                    ),
+                    List.of(
                             new MyUserSpecs(
                                     userName,
                                     userPassword
                             )
-                    },
+                    ),
                     new MyAccess(true, true),
                     new MyNetworkSettings("default")
             );
@@ -118,10 +128,18 @@ public class Jwt {
         }
     }
     public static void Shedule(String response, String key) {
-        // планировщик с одним потоком
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-        // задача для пулинга состояния кластера каждые 15 секунд
-        scheduler.scheduleAtFixedRate(new ClusterAvailabilityChecker(response, key), 15, 15, TimeUnit.SECONDS);
+
+        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(response, key);
+
+        ScheduledFuture<?> future = scheduler.scheduleWithFixedDelay(() -> {
+            boolean isClusterRunning = checker.call();
+            if (isClusterRunning) {
+                scheduler.shutdown();
+            }
+        }, 0, 1, TimeUnit.SECONDS);
     }
+
+
 }

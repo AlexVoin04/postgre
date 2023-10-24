@@ -75,11 +75,5 @@ public class ServerlessContainerManager {
     public static String DeployRevision(String apiKey, String response){
         return "";
     }
-    public static void Shedule(String response, String key) {
-        // планировщик с одним потоком
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-        // задача для пулинга состояния кластера каждые 15 секунд
-        scheduler.scheduleAtFixedRate(new ClusterAvailabilityChecker(response, key), 15, 15, TimeUnit.SECONDS);
-    }
 }
