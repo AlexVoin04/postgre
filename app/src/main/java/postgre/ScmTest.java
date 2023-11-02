@@ -48,8 +48,10 @@ public class ScmTest {
         var response = sendAndGetJson(request, ResponseBobyServerlessContainer1.class);
         if (response != null) {
             String containerId = response.getMetadata().getContainerId();
-            URI clusterURI = URI.create("https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/" + containerId);
-            return clusterURI;
+//            URI clusterURI = URI.create("https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/" + containerId);
+//            return clusterURI;
+            URI endpointURI = URI.create(createClusterURL + "/" + containerId);
+            return endpointURI;
         }
         return null;
     }
