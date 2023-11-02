@@ -69,7 +69,7 @@ class ClusterAvailabilityChecker implements Callable<Boolean> {
                         if ("RUNNING".equals(status)) {
                             System.out.println("Кластер работает");
                             isRunning = true;
-                            pollingTask.cancel(true); // Stop the polling task
+                            pollingTask.cancel(true);
                         }
                     } else {
                         System.err.println(responseString);
@@ -81,7 +81,7 @@ class ClusterAvailabilityChecker implements Callable<Boolean> {
                 } finally {
                     try {
                         if (httpClient != null) {
-                            httpClient.close();
+                            httpClient.close();//Ошибка возникает из-за не закрытого HTTP-клиента
                         }
                     } catch (IOException e) {
                         System.err.println("IOException: "+ e.getMessage());

@@ -1,5 +1,6 @@
 
 package postgre;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -28,32 +29,37 @@ public class App {
 //        Haikunator haikunator = new Haikunator();
 //        String jsonBody = CreateJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
 //        System.out.println("PostgreSQL:\n" +jsonBody);
-        Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
-        CredentialProvider provider2 = Auth.apiKeyBuilder()
-                .fromFile(path)
-                .build();
-        IamToken iamToken = provider2.get();
-        String apiKey = iamToken.getToken();
-        String test = "{\n" +
-                "  \"id\": \"c9qsnjbtv7vgkp9lhiv1\",\n" +
-                "  \"description\": \"string\",\n" +
-                "  \"createdAt\": \"string\",\n" +
-                "  \"createdBy\": \"string\",\n" +
-                "  \"modifiedAt\": \"string\",\n" +
-                "  \"done\": true,\n" +
-                "  \"metadata\": \"object\",\n" +
-                "\n" +
-                "  \"error\": {\n" +
-                "    \"code\": \"integer\",\n" +
-                "    \"message\": \"string\",\n" +
-                "    \"details\": [\n" +
-                "      \"object\"\n" +
-                "    ]\n" +
-                "  },\n" +
-                "  \"response\": \"object\"\n" +
-                "\n" +
-                "}";
-        TestTest(test, apiKey);
+
+//        Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
+//        CredentialProvider provider2 = Auth.apiKeyBuilder()
+//                .fromFile(path)
+//                .build();
+//        IamToken iamToken = provider2.get();
+//        String apiKey = iamToken.getToken();
+//        String test = "{\n" +
+//                "  \"id\": \"c9qsnjbtv7vgkp9lhiv1\",\n" +
+//                "  \"description\": \"string\",\n" +
+//                "  \"createdAt\": \"string\",\n" +
+//                "  \"createdBy\": \"string\",\n" +
+//                "  \"modifiedAt\": \"string\",\n" +
+//                "  \"done\": true,\n" +
+//                "  \"metadata\": \"object\",\n" +
+//                "\n" +
+//                "  \"error\": {\n" +
+//                "    \"code\": \"integer\",\n" +
+//                "    \"message\": \"string\",\n" +
+//                "    \"details\": [\n" +
+//                "      \"object\"\n" +
+//                "    ]\n" +
+//                "  },\n" +
+//                "  \"response\": \"object\"\n" +
+//                "\n" +
+//                "}";
+//        TestTest(test, apiKey);
+
+        ScmTest scmTest = new ScmTest();
+        URI uri = scmTest.deploy();
+        System.out.println("URI: \n" + uri);
     }
 
     Object getGreeting() {
