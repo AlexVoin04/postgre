@@ -63,12 +63,15 @@ public class ScmTest {
                 System.err.println(response.statusCode() + " " + response.body().get());
                 return null;
             }
-            System.out.println("Response: \n" + objectMapper.enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(response.body().get()));
+//            System.out.println("Response: \n" + objectMapper.enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(response.body().get()));
             return response.body().get();
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("Error in sendAndGetJson");
             e.printStackTrace();
             return null;
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException(e);
         }
     }
 
