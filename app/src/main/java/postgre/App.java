@@ -57,9 +57,16 @@ public class App {
 //                "}";
 //        TestTest(test, apiKey);
 
-        ScmTest scmTest = new ScmTest();
-        URI uri = scmTest.deploy();
-        System.out.println("URI: \n" + uri);
+//        ScmTest scmTest = new ScmTest();
+//        URI uri = scmTest.deploy("ru-central1");
+//        System.out.println("URI: \n" + uri);
+
+//        PostgresqlManager postgresqlManager = new PostgresqlManager();
+//        URI uri = postgresqlManager.deploy("PRESTABLE", "enpctngasilslbagno5p", "ru-central1-b", "e2ll2959l4rmhucfg4si", false);
+//        System.out.println("URI: \n" + uri);
+
+        RevisionManager revisionManager = new RevisionManager();
+        revisionManager.deploy();
     }
 
     Object getGreeting() {

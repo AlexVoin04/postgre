@@ -1,0 +1,595 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"98d0d78f-d2a9-4276-88a7-95014a85c8b3\" name=\"Changes\" comment=\"refr deploy\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <projects_view>\n          <tree_state>\n            <expand />\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Record\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"feature/deploy\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\n  \"lastFilter\": {\n    \"state\": \"OPEN\",\n    \"assignee\": \"AlexVoin04\"\n  }\n}]]></component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"a61e8b0a-7c14-4f79-a4ae-12ea3a6cce10\" />\n        <option name=\"url\" value=\"https://github.com/AlexVoin04/postgre.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"2X0mO4YAsw9OB5oWgAiDr2u43wr\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"hotfix/deploy-uri\",\n    \"last_opened_file_path\": \"/home/elena/Рабочий стол/Intership ITMS/Test-postgre/deffun-cloud-api\"\n  },\n  \"keyToStringList\": {\n    \"com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File\": [\n      \"JSON\"\n    ]\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/src/main/resources\" />\n      <recent name=\"$APPLICATION_CONFIG_DIR$/extensions/com.intellij.java\" />\n      <recent name=\"$PROJECT_DIR$/app/src/main/json\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/src/main/resources\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"postgre\" />\n      <recent name=\"postgre.model\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Application.App\">\n    <configuration name=\"App\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"postgre.App\" />\n      <module name=\"postgre.app.main\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"postgre.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Jwt\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"postgre.Jwt\" />\n      <module name=\"postgre.app.main\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"postgre.model.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.App\" />\n        <item itemvalue=\"Application.Jwt\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"98d0d78f-d2a9-4276-88a7-95014a85c8b3\" name=\"Changes\" comment=\"\" />\n      <created>1697774337230</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1697774337230</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"start deploy\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698906095908</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698906095908</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"refr deploy\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1698906912534</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1698906912534</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"start deploy\" />\n    <MESSAGE value=\"refr deploy\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"refr deploy\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,8 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="98d0d78f-d2a9-4276-88a7-95014a85c8b3" name="Changes" comment="refr deploy">
++    <list default="true" id="98d0d78f-d2a9-4276-88a7-95014a85c8b3" name="Changes" comment="refr uri in deploy">
++      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/JsonBodyHandlerTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/JsonRequestSender.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/PostgresqlManager.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -33,25 +39,25 @@
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Record" />
+         <option value="Class" />
++        <option value="Record" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="feature/deploy" />
++        <entry key="$PROJECT_DIR$" value="hotfix/deploy-uri" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "AlexVoin04"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;AlexVoin04&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -77,8 +83,8 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "hotfix/deploy-uri",
+-    "last_opened_file_path": "/home/elena/Рабочий стол/Intership ITMS/Test-postgre/deffun-cloud-api"
++    "git-widget-placeholder": "hotfix/deploy-uri-endpoint",
++    "last_opened_file_path": "/home/elena/Рабочий стол/Intership ITMS/Test-postgre/postgre"
+   },
+   "keyToStringList": {
+     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+@@ -159,12 +165,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1698906912534</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="refr uri in deploy">
++      <option name="closed" value="true" />
++      <created>1698909147614</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1698909147614</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="start deploy" />
+     <MESSAGE value="refr deploy" />
+-    <option name="LAST_COMMIT_MESSAGE" value="refr deploy" />
++    <MESSAGE value="refr uri in deploy" />
++    <option name="LAST_COMMIT_MESSAGE" value="refr uri in deploy" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/java/postgre/ClusterAvailabilityChecker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package postgre;\nimport com.fasterxml.jackson.databind.JsonNode;\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport org.apache.http.HttpEntity;\nimport org.apache.http.client.methods.CloseableHttpResponse;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.impl.client.CloseableHttpClient;\nimport org.apache.http.impl.client.HttpClients;\nimport org.apache.http.util.EntityUtils;\nimport yandex.cloud.sdk.auth.Auth;\nimport yandex.cloud.sdk.auth.IamToken;\nimport yandex.cloud.sdk.auth.provider.CredentialProvider;\n\nimport java.io.IOException;\nimport java.nio.file.Path;\nimport java.util.concurrent.*;\n\nclass ClusterAvailabilityChecker implements Callable<Boolean> {\n    private final String responseString;\n    private final String key;\n    private ScheduledExecutorService scheduler;\n    private ScheduledFuture<?> pollingTask;\n    private volatile boolean isRunning;\n\n\n    public ClusterAvailabilityChecker(String responseString, String key) {\n        this.responseString = responseString;\n        this.key = key;\n        this.scheduler = Executors.newSingleThreadScheduledExecutor();\n        this.pollingTask = null;\n        this.isRunning = false;\n    }\n\n    @Override\n    public Boolean call() {\n\n        try {\n            pollingTask = scheduler.scheduleAtFixedRate(() -> {\n                CloseableHttpClient httpClient = null;\n                try {\n                    Path path = Path.of(ClassLoader.getSystemResource(\"key.json\").toURI());\n                    CredentialProvider provider2 = Auth.apiKeyBuilder()\n                            .fromFile(path)\n                            .build();\n                    IamToken iamToken = provider2.get();\n\n                    ObjectMapper objectMapper = new ObjectMapper();\n                    JsonNode jsonResponse = objectMapper.readTree(this.responseString);\n                    String clusterId = jsonResponse.get(\"metadata\").get(\"clusterId\").asText();\n//                    System.out.println(\"clusterId = \" + clusterId);\n                    //            String getClusterStatusURL = \"https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters?folderId=b1ggaqs441crdco4j4it\";\n                    String getClusterStatusURL = \"https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters/\" + clusterId;\n                    httpClient = HttpClients.createDefault();\n                    HttpGet httpGet = new HttpGet(getClusterStatusURL);\n                    httpGet.setHeader(\"Content-Type\", \"application/json\");\n                    httpGet.setHeader(\"Authorization\", \"Bearer \" + iamToken.getToken());\n\n                    CloseableHttpResponse response = httpClient.execute(httpGet);\n                    HttpEntity entity = response.getEntity();\n                    String responseString = EntityUtils.toString(entity);\n\n                    if (response.getStatusLine().getStatusCode() == 200) {\n//                        System.out.println(responseString);\n                        JsonNode jsonResponseStatus = objectMapper.readTree(responseString);\n\n                        String status = jsonResponseStatus.get(\"status\").asText();\n\n                        System.out.println(\"Статус кластера: \" + status);\n                        if (\"RUNNING\".equals(status)) {\n                            System.out.println(\"Кластер работает\");\n                            isRunning = true;\n                            pollingTask.cancel(true);\n                        }\n                    } else {\n                        System.err.println(responseString);\n                    }\n                }catch (CancellationException ce){\n                    System.err.println(\"CancellationException: \" + ce.getMessage());\n                } catch (Exception e) {\n                    System.err.println(\"Exception1: \" + e.getMessage());\n                } finally {\n                    try {\n                        if (httpClient != null) {\n                            httpClient.close();//Ошибка возникает из-за не закрытого HTTP-клиента\n                        }\n                    } catch (IOException e) {\n                        System.err.println(\"IOException: \"+ e.getMessage());\n                    }\n                }\n            }, 15, 15, TimeUnit.SECONDS);\n            pollingTask.get();\n        } catch (Exception e) {\n            System.err.println(\"Exception: \" + e.getMessage());\n        } finally {\n            scheduler.shutdown();\n        }\n        return isRunning;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/postgre/ClusterAvailabilityChecker.java b/app/src/main/java/postgre/ClusterAvailabilityChecker.java
+--- a/app/src/main/java/postgre/ClusterAvailabilityChecker.java	
++++ b/app/src/main/java/postgre/ClusterAvailabilityChecker.java	
+@@ -16,16 +16,15 @@
+ import java.util.concurrent.*;
+ 
+ class ClusterAvailabilityChecker implements Callable<Boolean> {
+-    private final String responseString;
+-    private final String key;
++    private final String clusterId;
++
+     private ScheduledExecutorService scheduler;
+     private ScheduledFuture<?> pollingTask;
+     private volatile boolean isRunning;
+ 
+ 
+-    public ClusterAvailabilityChecker(String responseString, String key) {
+-        this.responseString = responseString;
+-        this.key = key;
++    public ClusterAvailabilityChecker(String clusterId) {
++        this.clusterId = clusterId;
+         this.scheduler = Executors.newSingleThreadScheduledExecutor();
+         this.pollingTask = null;
+         this.isRunning = false;
+@@ -45,10 +44,6 @@
+                     IamToken iamToken = provider2.get();
+ 
+                     ObjectMapper objectMapper = new ObjectMapper();
+-                    JsonNode jsonResponse = objectMapper.readTree(this.responseString);
+-                    String clusterId = jsonResponse.get("metadata").get("clusterId").asText();
+-//                    System.out.println("clusterId = " + clusterId);
+-                    //            String getClusterStatusURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters?folderId=b1ggaqs441crdco4j4it";
+                     String getClusterStatusURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters/" + clusterId;
+                     httpClient = HttpClients.createDefault();
+                     HttpGet httpGet = new HttpGet(getClusterStatusURL);
+Index: app/src/main/java/postgre/JsonBodyHandlerTest.java
+===================================================================
+diff --git a/app/src/main/java/postgre/JsonBodyHandlerTest.java b/app/src/main/java/postgre/JsonBodyHandlerTest.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/postgre/JsonBodyHandlerTest.java	
+@@ -0,0 +1,36 @@
++package postgre;
++
++import com.fasterxml.jackson.databind.ObjectMapper;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.net.http.HttpResponse;
++import java.util.function.Supplier;
++
++class JsonBodyHandlerTest<W> implements HttpResponse.BodyHandler<Supplier<W>> {
++    private final Class<W> wClass;
++
++    public JsonBodyHandlerTest(Class<W> wClass) {
++        this.wClass = wClass;
++    }
++
++    @Override
++    public HttpResponse.BodySubscriber<Supplier<W>> apply(HttpResponse.ResponseInfo responseInfo) {
++        return asJson(wClass);
++    }
++
++    private HttpResponse.BodySubscriber<Supplier<W>> asJson(Class<W> targetType) {
++        HttpResponse.BodySubscriber<InputStream> upstream = HttpResponse.BodySubscribers.ofInputStream();
++        return HttpResponse.BodySubscribers.mapping(
++                upstream,
++                inputStream -> () -> {
++                    try (InputStream stream = inputStream) {
++                        ObjectMapper objectMapper = new ObjectMapper();
++                        return objectMapper.readValue(stream, targetType);
++                    } catch (IOException e) {
++                        e.printStackTrace();
++                        return null;
++                    }
++                });
++    }
++}
+Index: app/src/main/java/postgre/Jwt.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\n * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\n */\npackage postgre;\n\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport me.atrox.haikunator.Haikunator;\nimport org.apache.http.HttpEntity;\nimport org.apache.http.client.methods.CloseableHttpResponse;\nimport org.apache.http.client.methods.HttpPost;\nimport org.apache.http.entity.StringEntity;\nimport org.apache.http.impl.client.CloseableHttpClient;\nimport org.apache.http.impl.client.HttpClients;\nimport org.apache.http.util.EntityUtils;\n\nimport postgre.model.*;\nimport yandex.cloud.sdk.auth.Auth;\nimport yandex.cloud.sdk.auth.IamToken;\nimport yandex.cloud.sdk.auth.provider.CredentialProvider;\n\nimport java.io.IOException;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.ScheduledExecutorService;\nimport java.util.concurrent.ScheduledFuture;\nimport java.util.concurrent.TimeUnit;\nimport java.nio.file.Path;\n\n/**\n *\n * @author Alex\n */\npublic class Jwt {\n    public static void main(String[] args) throws Exception {\n        Path path = Path.of(ClassLoader.getSystemResource(\"key.json\").toURI());\n        CredentialProvider provider2 = Auth.apiKeyBuilder()\n                .fromFile(path)\n                .build();\n        IamToken iamToken = provider2.get();\n\n        System.out.println(\"JWT Token: \" + iamToken.getToken());\n\n        String apiKey = iamToken.getToken();\n        String createClusterURL = \"https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters\";\n        CloseableHttpClient httpClient = null;\n        try {\n            Haikunator haikunator = new Haikunator();\n            String jsonBody = CreateJsonBody(haikunator.haikunate(), \"\", \"user-pg\", PasGenerator.Generate());\n            httpClient = HttpClients.createDefault();\n            HttpPost httpPost = new HttpPost(createClusterURL);\n\n            httpPost.setHeader(\"Content-Type\", \"application/json\");\n            httpPost.setHeader(\"Authorization\", \"Bearer \" + apiKey);\n            httpPost.setEntity(new StringEntity(jsonBody));\n\n            CloseableHttpResponse response = httpClient.execute(httpPost);\n            HttpEntity entity = response.getEntity();\n            String responseString = EntityUtils.toString(entity);\n\n            if (response.getStatusLine().getStatusCode() == 200) {\n                System.out.println(\"PostgreSQL:\\n\" +responseString);\n                Shedule(responseString, apiKey);\n            } else {\n                System.err.println(responseString);\n            }\n        } catch (Exception e) {\n            e.printStackTrace();\n        }finally {\n            try {\n                if (httpClient != null) {\n                    httpClient.close();\n                }\n            } catch (IOException e) {\n                System.err.println(\"IOException JWT.main: \" + e.getMessage());\n            }\n        }\n    }\n\n    public static String CreateJsonBody(String name, String description, String userName, String userPassword){\n        ObjectMapper objectMapper = new ObjectMapper();\n        try {\n            MyCluster jsonData = new MyCluster(\n                    \"b1ggaqs441crdco4j4it\",\n                    name,\n                    description,\n                    Map.of(),\n                    \"PRESTABLE\",\n                    \"enpctngasilslbagno5p\",\n                    new MyConfigSpec(\n                            \"15\",\n                            new MyResources(\"s3-c2-m8\", 10737418240L, \"network-ssd\"),\n                            true,\n                            new MyBackupWindowStart(0, 0, 0, 0),\n                            7,\n                            new MyPerformanceDiagnostics(false, 10, 600)\n                    ),\n                    List.of(\n                            new MyHostSpecs(\n                                    \"ru-central1-b\",\n                                    \"e2ll2959l4rmhucfg4si\",\n                                    false\n                            )\n                    ),\n                    List.of(\n                            new MyDatabaseSpecs(\n                                    \"bd-pg\",\n                                    userName,\n                                    \"C\",\n                                    \"C\"\n                            )\n                    ),\n                    List.of(\n                            new MyUserSpecs(\n                                    userName,\n                                    userPassword\n                            )\n                    ),\n                    new MyAccess(true, true),\n                    new MyNetworkSettings(\"default\")\n            );\n\n            return objectMapper.writeValueAsString(jsonData);\n        } catch (Exception e) {\n            e.printStackTrace();\n            return null;\n        }\n    }\n    public static void Shedule(String response, String key) {\n        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);\n\n\n        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(response, key);\n\n        ScheduledFuture<?> future = scheduler.scheduleWithFixedDelay(() -> {\n            boolean isClusterRunning = checker.call();\n            if (isClusterRunning) {\n                scheduler.shutdown();\n            }\n        }, 0, 1, TimeUnit.SECONDS);\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/postgre/Jwt.java b/app/src/main/java/postgre/Jwt.java
+--- a/app/src/main/java/postgre/Jwt.java	
++++ b/app/src/main/java/postgre/Jwt.java	
+@@ -61,7 +61,7 @@
+ 
+             if (response.getStatusLine().getStatusCode() == 200) {
+                 System.out.println("PostgreSQL:\n" +responseString);
+-                Shedule(responseString, apiKey);
++                shedule(responseString, apiKey);
+             } else {
+                 System.err.println(responseString);
+             }
+@@ -127,11 +127,11 @@
+             return null;
+         }
+     }
+-    public static void Shedule(String response, String key) {
++    public static void shedule(String response, String key) {
+         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+ 
+ 
+-        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(response, key);
++        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(response);
+ 
+         ScheduledFuture<?> future = scheduler.scheduleWithFixedDelay(() -> {
+             boolean isClusterRunning = checker.call();
+Index: app/src/main/java/postgre/App.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\npackage postgre;\nimport java.net.URI;\nimport java.nio.file.Files;\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\n\nimport com.fasterxml.jackson.databind.JsonNode;\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport me.atrox.haikunator.Haikunator;\nimport org.apache.http.HttpEntity;\nimport org.apache.http.client.methods.CloseableHttpResponse;\nimport org.apache.http.client.methods.HttpGet;\nimport org.apache.http.client.methods.HttpPost;\nimport org.apache.http.impl.client.CloseableHttpClient;\nimport org.apache.http.impl.client.HttpClients;\nimport org.apache.http.util.EntityUtils;\nimport org.apache.http.entity.StringEntity;\nimport yandex.cloud.sdk.auth.Auth;\nimport yandex.cloud.sdk.auth.IamToken;\nimport yandex.cloud.sdk.auth.provider.CredentialProvider;\n\nimport static postgre.Jwt.CreateJsonBody;\n\npublic class App {\n\n    public static void main(String[] args) throws Exception {\n\n//        Haikunator haikunator = new Haikunator();\n//        String jsonBody = CreateJsonBody(haikunator.haikunate(), \"\", \"user-pg\", PasGenerator.Generate());\n//        System.out.println(\"PostgreSQL:\\n\" +jsonBody);\n\n//        Path path = Path.of(ClassLoader.getSystemResource(\"key.json\").toURI());\n//        CredentialProvider provider2 = Auth.apiKeyBuilder()\n//                .fromFile(path)\n//                .build();\n//        IamToken iamToken = provider2.get();\n//        String apiKey = iamToken.getToken();\n//        String test = \"{\\n\" +\n//                \"  \\\"id\\\": \\\"c9qsnjbtv7vgkp9lhiv1\\\",\\n\" +\n//                \"  \\\"description\\\": \\\"string\\\",\\n\" +\n//                \"  \\\"createdAt\\\": \\\"string\\\",\\n\" +\n//                \"  \\\"createdBy\\\": \\\"string\\\",\\n\" +\n//                \"  \\\"modifiedAt\\\": \\\"string\\\",\\n\" +\n//                \"  \\\"done\\\": true,\\n\" +\n//                \"  \\\"metadata\\\": \\\"object\\\",\\n\" +\n//                \"\\n\" +\n//                \"  \\\"error\\\": {\\n\" +\n//                \"    \\\"code\\\": \\\"integer\\\",\\n\" +\n//                \"    \\\"message\\\": \\\"string\\\",\\n\" +\n//                \"    \\\"details\\\": [\\n\" +\n//                \"      \\\"object\\\"\\n\" +\n//                \"    ]\\n\" +\n//                \"  },\\n\" +\n//                \"  \\\"response\\\": \\\"object\\\"\\n\" +\n//                \"\\n\" +\n//                \"}\";\n//        TestTest(test, apiKey);\n\n        ScmTest scmTest = new ScmTest();\n        URI uri = scmTest.deploy();\n        System.out.println(\"URI: \\n\" + uri);\n    }\n\n    Object getGreeting() {\n        throw new UnsupportedOperationException(\"Not supported yet.\"); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody\n    }\n\n    public static void TestTest(String responseString, String key) {\n        try {\n            ObjectMapper objectMapper = new ObjectMapper();\n            JsonNode jsonResponse = objectMapper.readTree(responseString);\n            String clusterId = jsonResponse.get(\"id\").asText();\n            String getClusterStatusURL = \"https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters/\" + clusterId;\n            CloseableHttpClient httpClient = HttpClients.createDefault();\n\n            //GET-запрос к кластеру\n            HttpGet httpGet = new HttpGet(getClusterStatusURL);\n            httpGet.setHeader(\"Content-Type\", \"application/json\");\n            httpGet.setHeader(\"Authorization\", \"Bearer \" + key);\n\n            CloseableHttpResponse response = httpClient.execute(httpGet);\n            HttpEntity entity = response.getEntity();\n            String responseString1 = EntityUtils.toString(entity);\n\n            if (response.getStatusLine().getStatusCode() == 200) {\n                System.out.println(responseString1);\n                JsonNode jsonResponseStatus = objectMapper.readTree(responseString1);\n\n                String status = jsonResponseStatus.get(\"status\").asText();\n                if (\"RUNNING\".equals(status)) {\n                    System.out.println(\"Статус кластера: RUNNING\");\n                } else {\n                    System.out.println(\"Статус кластера: \" + status);\n                }\n            } else {\n                System.err.println(responseString1);\n            }\n\n            // Закрываем HTTP-клиент\n            httpClient.close();\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/postgre/App.java b/app/src/main/java/postgre/App.java
+--- a/app/src/main/java/postgre/App.java	
++++ b/app/src/main/java/postgre/App.java	
+@@ -60,6 +60,9 @@
+         ScmTest scmTest = new ScmTest();
+         URI uri = scmTest.deploy();
+         System.out.println("URI: \n" + uri);
++//        PostgresqlManager postgresqlManager = new PostgresqlManager();
++//        URI uri = postgresqlManager.deploy();
++//        System.out.println("URI: \n" + uri);
+     }
+ 
+     Object getGreeting() {
+Index: app/src/main/java/postgre/PostgresqlManager.java
+===================================================================
+diff --git a/app/src/main/java/postgre/PostgresqlManager.java b/app/src/main/java/postgre/PostgresqlManager.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/postgre/PostgresqlManager.java	
+@@ -0,0 +1,274 @@
++package postgre;
++
++import com.fasterxml.jackson.annotation.JsonAutoDetect;
++import com.fasterxml.jackson.annotation.JsonProperty;
++import com.fasterxml.jackson.databind.ObjectMapper;
++import me.atrox.haikunator.Haikunator;
++import postgre.model.*;
++import yandex.cloud.sdk.auth.Auth;
++import yandex.cloud.sdk.auth.IamToken;
++import yandex.cloud.sdk.auth.provider.CredentialProvider;
++
++import java.io.IOException;
++import java.io.InputStream;
++import java.net.URI;
++import java.net.http.HttpClient;
++import java.net.http.HttpRequest;
++import java.net.http.HttpResponse;
++import java.nio.file.Path;
++import java.util.List;
++import java.util.Map;
++import java.util.concurrent.Executors;
++import java.util.concurrent.ScheduledExecutorService;
++import java.util.concurrent.ScheduledFuture;
++import java.util.concurrent.TimeUnit;
++import java.util.function.Supplier;
++
++public class PostgresqlManager {
++    public URI deploy() throws Exception {
++        Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
++        CredentialProvider provider2 = Auth.apiKeyBuilder()
++                .fromFile(path)
++                .build();
++        IamToken iamToken = provider2.get();
++
++        System.out.println("JWT Token: " + iamToken.getToken());
++
++        String apiKey = iamToken.getToken();
++        String createClusterURL = "https://mdb.api.cloud.yandex.net/managed-postgresql/v1/clusters";
++        Haikunator haikunator = new Haikunator();
++        String jsonBody = createJsonBody(haikunator.haikunate(), "", "user-pg", PasGenerator.Generate());
++
++        assert jsonBody != null;
++        HttpRequest request = HttpRequest.newBuilder()
++                .uri(URI.create(createClusterURL))
++                .header("Content-Type", "application/json")
++                .header("Authorization", "Bearer " + apiKey)
++                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
++                .build();
++
++        var response = sendAndGetJson(request, ResponseBobyPostgreSql.class);
++        if (response != null) {
++            String containerId = response.getMetadata().getClusterId();
++//            URI clusterURI = URI.create("https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/" + containerId);
++//            return clusterURI;
++            URI endpointURI = URI.create(createClusterURL + "/" + containerId);
++            return endpointURI;
++        }
++        return null;
++    }
++
++    private static <T> T sendAndGetJson(HttpRequest httpRequest, Class<T> aClass){
++        HttpClient client = HttpClient.newHttpClient();
++        try {
++            var response = client.send(httpRequest, new JsonBodyHandler<>(aClass));
++            if (response.statusCode() != 200) {
++                System.err.println(response.statusCode() + " " + response.body().get());
++                return null;
++            }
++            return response.body().get();
++        } catch (IOException e) {
++            System.err.println("Error in sendAndGetJson");
++            e.printStackTrace();
++            return null;
++        } catch (InterruptedException e) {
++            Thread.currentThread().interrupt();
++            throw new RuntimeException(e);
++        }
++    }
++
++    public static <W> HttpResponse.BodySubscriber<Supplier<W>> asJson(Class<W> targetType) {
++        HttpResponse.BodySubscriber<InputStream> upstream = HttpResponse.BodySubscribers.ofInputStream();
++        return HttpResponse.BodySubscribers.mapping(
++                upstream,
++                inputStream -> () -> {
++                    try (InputStream stream = inputStream) {
++                        ObjectMapper objectMapper = new ObjectMapper();
++                        return objectMapper.readValue(stream, targetType);
++                    } catch (IOException e) {
++                        System.err.println("Error in asJson");
++                        e.printStackTrace();
++                        return null;
++                    }
++                });
++    }
++
++    static class JsonBodyHandler<W> implements HttpResponse.BodyHandler<Supplier<W>> {
++        private final Class<W> wClass;
++
++        public JsonBodyHandler(Class<W> wClass) {
++            this.wClass = wClass;
++        }
++
++        @Override
++        public HttpResponse.BodySubscriber<Supplier<W>> apply(HttpResponse.ResponseInfo responseInfo) {
++            return asJson(wClass);
++        }
++
++    }
++
++    public static String createJsonBody(String name, String description, String userName, String userPassword){
++        ObjectMapper objectMapper = new ObjectMapper();
++        try {
++            Cluster jsonData = new Cluster(
++                    "b1ggaqs441crdco4j4it",
++                    name,
++                    description,
++                    Map.of(),
++                    "PRESTABLE",
++                    "enpctngasilslbagno5p",
++                    new Cluster.ConfigSpec(
++                            "15",
++                            new Cluster.ConfigSpec.Resources("s3-c2-m8", 10737418240L, "network-ssd"),
++                            true,
++                            new Cluster.ConfigSpec.BackupWindowStart(0, 0, 0, 0),
++                            7,
++                            new Cluster.ConfigSpec.PerformanceDiagnostics(false, 10, 600)
++                    ),
++                    List.of(
++                            new Cluster.HostSpecs(
++                                    "ru-central1-b",
++                                    "e2ll2959l4rmhucfg4si",
++                                    false
++                            )
++                    ),
++                    List.of(
++                            new Cluster.DatabaseSpecs(
++                                    "bd-pg",
++                                    userName,
++                                    "C",
++                                    "C"
++                            )
++                    ),
++                    List.of(
++                            new Cluster.UserSpecs(
++                                    userName,
++                                    userPassword
++                            )
++                    ),
++                    new Cluster.Access(true, true),
++                    new Cluster.NetworkSettings("default")
++            );
++
++            return objectMapper.writeValueAsString(jsonData);
++        } catch (Exception e) {
++            e.printStackTrace();
++            return null;
++        }
++    }
++    public static void shedule(String clusterId) {
++        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
++        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(clusterId);
++
++        ScheduledFuture<?> future = scheduler.scheduleWithFixedDelay(() -> {
++            boolean isClusterRunning = checker.call();
++            if (isClusterRunning) {
++                scheduler.shutdown();
++            }
++        }, 0, 1, TimeUnit.SECONDS);
++    }
++
++    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
++    public static class ResponseBobyPostgreSql{
++        private Boolean done;
++        private Metadata1 metadata;
++        private String id;
++        private String description;
++        private String createdAt;
++        private String createdBy;
++        private String modifiedAt;
++
++        public static class Metadata1 {
++            @JsonProperty("@type")
++            private String type;
++            private String clusterId;
++
++            public String getType() {
++                return type;
++            }
++
++            public void setType(String type) {
++                this.type = type;
++            }
++
++            public String getClusterId() {
++                return clusterId;
++            }
++
++            public void setClusterId(String clusterId) {
++                this.clusterId = clusterId;
++            }
++        }
++
++        public Boolean getDone() {
++            return done;
++        }
++
++        public void setDone(Boolean done) {
++            this.done = done;
++        }
++
++        public Metadata1 getMetadata() {
++            return metadata;
++        }
++
++        public void setMetadata(Metadata1 metadata) {
++            this.metadata = metadata;
++        }
++
++        public String getId() {
++            return id;
++        }
++
++        public void setId(String id) {
++            this.id = id;
++        }
++
++        public String getDescription() {
++            return description;
++        }
++
++        public void setDescription(String description) {
++            this.description = description;
++        }
++
++        public String getCreatedAt() {
++            return createdAt;
++        }
++
++        public void setCreatedAt(String createdAt) {
++            this.createdAt = createdAt;
++        }
++
++        public String getCreatedBy() {
++            return createdBy;
++        }
++
++        public void setCreatedBy(String createdBy) {
++            this.createdBy = createdBy;
++        }
++
++        public String getModifiedAt() {
++            return modifiedAt;
++        }
++
++        public void setModifiedAt(String modifiedAt) {
++            this.modifiedAt = modifiedAt;
++        }
++    }
++
++    /*
++    {
++ "done": false,
++ "metadata": {
++  "@type": "type.googleapis.com/yandex.cloud.mdb.postgresql.v1.CreateClusterMetadata",
++  "clusterId": "c9qn928sqtnv46qsvu3v"
++ },
++ "id": "c9qtogqucocp7qsd6bbi",
++ "description": "Create PostgreSQL cluster",
++ "createdAt": "2023-11-03T03:45:35.152250Z",
++ "createdBy": "ajeo4f6pqi43bttp0li3",
++ "modifiedAt": "2023-11-03T03:45:35.152250Z"
++}
++     */
++}
+Index: app/src/main/java/postgre/ScmTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package postgre;\nimport com.fasterxml.jackson.annotation.JsonAutoDetect;\nimport com.fasterxml.jackson.annotation.JsonProperty;\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport com.fasterxml.jackson.databind.SerializationFeature;\nimport me.atrox.haikunator.Haikunator;\nimport org.apache.http.util.EntityUtils;\nimport postgre.model.MyServerlessContainer;\nimport postgre.model.ResponseBobyServerlessContainer;\nimport yandex.cloud.sdk.auth.Auth;\nimport yandex.cloud.sdk.auth.IamToken;\nimport yandex.cloud.sdk.auth.provider.CredentialProvider;\n\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.net.URI;\nimport java.net.http.HttpClient;\nimport java.net.http.HttpRequest;\nimport java.net.http.HttpResponse;\nimport java.nio.file.Path;\nimport java.util.List;\nimport java.util.function.Supplier;\n\npublic class ScmTest {\n\n    public URI deploy()  throws Exception{\n        Path path = Path.of(ClassLoader.getSystemResource(\"key.json\").toURI());\n        CredentialProvider provider2 = Auth.apiKeyBuilder()\n                .fromFile(path)\n                .build();\n        IamToken iamToken = provider2.get();\n\n        System.out.println(\"JWT Token: \" + iamToken.getToken());\n\n        String apiKey = iamToken.getToken();\n        String createClusterURL = \"https://serverless-containers.api.cloud.yandex.net/containers/v1/containers\";\n\n        Haikunator haikunator = new Haikunator();\n        String jsonBody = CreateJsonBody(haikunator.haikunate());\n\n        assert jsonBody != null;\n        HttpRequest request = HttpRequest.newBuilder()\n                .uri(URI.create(createClusterURL))\n                .header(\"Content-Type\", \"application/json\")\n                .header(\"Authorization\", \"Bearer \" + apiKey)\n                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))\n                .build();\n        var response = sendAndGetJson(request, ResponseBobyServerlessContainer1.class);\n        if (response != null) {\n            String containerId = response.getMetadata().getContainerId();\n//            URI clusterURI = URI.create(\"https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/\" + containerId);\n//            return clusterURI;\n            URI endpointURI = URI.create(createClusterURL + \"/\" + containerId);\n            return endpointURI;\n        }\n        return null;\n    }\n\n    private static <T> T sendAndGetJson(HttpRequest httpRequest, Class<T> aClass){\n        HttpClient client = HttpClient.newHttpClient();\n        final ObjectMapper objectMapper = new ObjectMapper();\n        try {\n            var response = client.send(httpRequest, new JsonBodyHandler<>(aClass));\n            if (response.statusCode() != 200) {\n                System.err.println(response.statusCode() + \" \" + response.body().get());\n                return null;\n            }\n//            System.out.println(\"Response: \\n\" + objectMapper.enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(response.body().get()));\n            return response.body().get();\n        } catch (IOException e) {\n            System.out.println(\"Error in sendAndGetJson\");\n            e.printStackTrace();\n            return null;\n        } catch (InterruptedException e) {\n            Thread.currentThread().interrupt();\n            throw new RuntimeException(e);\n        }\n    }\n\n    public static <W> HttpResponse.BodySubscriber<Supplier<W>> asJson(Class<W> targetType) {\n        HttpResponse.BodySubscriber<InputStream> upstream = HttpResponse.BodySubscribers.ofInputStream();\n        return HttpResponse.BodySubscribers.mapping(\n                upstream,\n                inputStream -> () -> {\n                    try (InputStream stream = inputStream) {\n                        ObjectMapper objectMapper = new ObjectMapper();\n                        return objectMapper.readValue(stream, targetType);\n                    } catch (IOException e) {\n                        System.out.println(\"Error in asJson\");\n                        e.printStackTrace();\n                        return null;\n                    }\n                });\n    }\n    static class JsonBodyHandler<W> implements HttpResponse.BodyHandler<Supplier<W>> {\n        private final Class<W> wClass;\n\n        public JsonBodyHandler(Class<W> wClass) {\n            this.wClass = wClass;\n        }\n\n        @Override\n        public HttpResponse.BodySubscriber<Supplier<W>> apply(HttpResponse.ResponseInfo responseInfo) {\n            return asJson(wClass);\n        }\n\n    }\n\n    private String CreateJsonBody(String name){\n        ObjectMapper objectMapper = new ObjectMapper();\n        try {\n            MyServerlessContainer jsonData = new MyServerlessContainer(\n                    \"b1ggaqs441crdco4j4it\",\n                    \"ru-central1\",\n                    name\n            );\n            return objectMapper.writeValueAsString(jsonData);\n        } catch (Exception e) {\n            e.printStackTrace();\n            return null;\n        }\n    }\n\n    private String DeployRevision(String apiKey, String response){\n        return \"\";\n    }\n\n    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)\n    public static class ResponseBobyServerlessContainer1 {\n        private Boolean done;\n        private Metadata1 metadata;\n        private String id;\n        private String description;\n        private String createdAt;\n        private String createdBy;\n        private String modifiedAt;\n\n        public static class Metadata1 {\n            @JsonProperty(\"@type\")\n            private String type;\n            private String containerId;\n\n            public String getType() {\n                return type;\n            }\n\n            public void setType(String type) {\n                this.type = type;\n            }\n\n            public String getContainerId() {\n                return containerId;\n            }\n\n            public void setContainerId(String containerId) {\n                this.containerId = containerId;\n            }\n        }\n\n        public Boolean getDone() {\n            return done;\n        }\n\n        public void setDone(Boolean done) {\n            this.done = done;\n        }\n\n        public Metadata1 getMetadata() {\n            return metadata;\n        }\n\n        public void setMetadata(Metadata1 metadata) {\n            this.metadata = metadata;\n        }\n\n        public String getId() {\n            return id;\n        }\n\n        public void setId(String id) {\n            this.id = id;\n        }\n\n        public String getDescription() {\n            return description;\n        }\n\n        public void setDescription(String description) {\n            this.description = description;\n        }\n\n        public String getCreatedAt() {\n            return createdAt;\n        }\n\n        public void setCreatedAt(String createdAt) {\n            this.createdAt = createdAt;\n        }\n\n        public String getCreatedBy() {\n            return createdBy;\n        }\n\n        public void setCreatedBy(String createdBy) {\n            this.createdBy = createdBy;\n        }\n\n        public String getModifiedAt() {\n            return modifiedAt;\n        }\n\n        public void setModifiedAt(String modifiedAt) {\n            this.modifiedAt = modifiedAt;\n        }\n    }\n\n}\n
+===================================================================
+diff --git a/app/src/main/java/postgre/ScmTest.java b/app/src/main/java/postgre/ScmTest.java
+--- a/app/src/main/java/postgre/ScmTest.java	
++++ b/app/src/main/java/postgre/ScmTest.java	
+@@ -22,6 +22,7 @@
+ import java.util.function.Supplier;
+ 
+ public class ScmTest {
++    JsonRequestSender jsonRequestSender = new JsonRequestSender();
+ 
+     public URI deploy()  throws Exception{
+         Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
+@@ -45,7 +46,7 @@
+                 .header("Authorization", "Bearer " + apiKey)
+                 .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
+                 .build();
+-        var response = sendAndGetJson(request, ResponseBobyServerlessContainer1.class);
++        var response = jsonRequestSender.sendAndGetJson(request, ResponseBobyServerlessContainer1.class);
+         if (response != null) {
+             String containerId = response.getMetadata().getContainerId();
+ //            URI clusterURI = URI.create("https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/" + containerId);
+@@ -56,55 +57,7 @@
+         return null;
+     }
+ 
+-    private static <T> T sendAndGetJson(HttpRequest httpRequest, Class<T> aClass){
+-        HttpClient client = HttpClient.newHttpClient();
+-        final ObjectMapper objectMapper = new ObjectMapper();
+-        try {
+-            var response = client.send(httpRequest, new JsonBodyHandler<>(aClass));
+-            if (response.statusCode() != 200) {
+-                System.err.println(response.statusCode() + " " + response.body().get());
+-                return null;
+-            }
+-//            System.out.println("Response: \n" + objectMapper.enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(response.body().get()));
+-            return response.body().get();
+-        } catch (IOException e) {
+-            System.out.println("Error in sendAndGetJson");
+-            e.printStackTrace();
+-            return null;
+-        } catch (InterruptedException e) {
+-            Thread.currentThread().interrupt();
+-            throw new RuntimeException(e);
+-        }
+-    }
+-
+-    public static <W> HttpResponse.BodySubscriber<Supplier<W>> asJson(Class<W> targetType) {
+-        HttpResponse.BodySubscriber<InputStream> upstream = HttpResponse.BodySubscribers.ofInputStream();
+-        return HttpResponse.BodySubscribers.mapping(
+-                upstream,
+-                inputStream -> () -> {
+-                    try (InputStream stream = inputStream) {
+-                        ObjectMapper objectMapper = new ObjectMapper();
+-                        return objectMapper.readValue(stream, targetType);
+-                    } catch (IOException e) {
+-                        System.out.println("Error in asJson");
+-                        e.printStackTrace();
+-                        return null;
+-                    }
+-                });
+-    }
+-    static class JsonBodyHandler<W> implements HttpResponse.BodyHandler<Supplier<W>> {
+-        private final Class<W> wClass;
+-
+-        public JsonBodyHandler(Class<W> wClass) {
+-            this.wClass = wClass;
+-        }
+ 
+-        @Override
+-        public HttpResponse.BodySubscriber<Supplier<W>> apply(HttpResponse.ResponseInfo responseInfo) {
+-            return asJson(wClass);
+-        }
+-
+-    }
+ 
+     private String CreateJsonBody(String name){
+         ObjectMapper objectMapper = new ObjectMapper();

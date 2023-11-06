@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d0d78f-d2a9-4276-88a7-95014a85c8b3" name="Changes" comment="refr deploy">
+    <list default="true" id="98d0d78f-d2a9-4276-88a7-95014a85c8b3" name="Changes" comment="refr cluster and container">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityCheckerOld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/JsonRequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/PostgresqlManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/RevisionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/YandexHttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/ClusterPostgr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/postgre/model/Revision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ClusterAvailabilityChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/Jwt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/postgre/ScmTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +56,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AlexVoin04"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlexVoin04&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -77,8 +87,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "hotfix/deploy-uri",
-    "last_opened_file_path": "/home/elena/Рабочий стол/Intership ITMS/Test-postgre/deffun-cloud-api"
+    "git-widget-placeholder": "hotfix/deploy-uri-endpoint",
+    "last_opened_file_path": "/home/elena/Рабочий стол/Intership ITMS/Test-postgre/postgre"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [

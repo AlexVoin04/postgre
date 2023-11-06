@@ -131,7 +131,7 @@ public class Jwt {
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
 
-        ClusterAvailabilityChecker checker = new ClusterAvailabilityChecker(response, key);
+        ClusterAvailabilityCheckerOld checker = new ClusterAvailabilityCheckerOld(response, key);
 
         ScheduledFuture<?> future = scheduler.scheduleWithFixedDelay(() -> {
             boolean isClusterRunning = checker.call();

@@ -1,5 +1,6 @@
 package postgre;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -18,100 +19,38 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Path;
+import java.util.Date;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class ScmTest {
 
-    public URI deploy()  throws Exception{
-        Path path = Path.of(ClassLoader.getSystemResource("key.json").toURI());
-        CredentialProvider provider2 = Auth.apiKeyBuilder()
-                .fromFile(path)
-                .build();
-        IamToken iamToken = provider2.get();
-
-        System.out.println("JWT Token: " + iamToken.getToken());
-
-        String apiKey = iamToken.getToken();
-        String createClusterURL = "https://serverless-containers.api.cloud.yandex.net/containers/v1/containers";
-
+    public URI deploy(String regionId)  throws Exception{
+        String jsonFilePath = "/home/elena/Загрузки/key.json";
         Haikunator haikunator = new Haikunator();
-        String jsonBody = CreateJsonBody(haikunator.haikunate());
-
-        assert jsonBody != null;
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(createClusterURL))
-                .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + apiKey)
-                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
-                .build();
-        var response = sendAndGetJson(request, ResponseBobyServerlessContainer1.class);
+        String jsonBody = createJsonBody(haikunator.haikunate(), regionId);
+        String createContainerURL = "https://serverless-containers.api.cloud.yandex.net/containers/v1/containers";
+        var request = YandexHttp.requestCreate(jsonFilePath, jsonBody, createContainerURL);
+        var response = JsonRequestSender.sendAndGetJson(request, ResponseBobyServerlessContainer.class);
         if (response != null) {
             String containerId = response.getMetadata().getContainerId();
-//            URI clusterURI = URI.create("https://console.cloud.yandex.ru/folders/b1ggaqs441crdco4j4it/serverless-containers/containers/" + containerId);
-//            return clusterURI;
-            URI endpointURI = URI.create(createClusterURL + "/" + containerId);
-            return endpointURI;
+            String containerUrl = "https://serverless-containers.api.cloud.yandex.net/containers/v1/containers/" + containerId;
+            var containerRequest = YandexHttp.requestGet(jsonFilePath,containerUrl);
+            var containerResponse = JsonRequestSender.sendAndGetJson(containerRequest, ContainerInfo.class);
+            if (containerResponse != null){
+                String containerURL = containerResponse.getUrl();
+                return URI.create(containerURL);
+            }
         }
         return null;
     }
 
-    private static <T> T sendAndGetJson(HttpRequest httpRequest, Class<T> aClass){
-        HttpClient client = HttpClient.newHttpClient();
-        final ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            var response = client.send(httpRequest, new JsonBodyHandler<>(aClass));
-            if (response.statusCode() != 200) {
-                System.err.println(response.statusCode() + " " + response.body().get());
-                return null;
-            }
-//            System.out.println("Response: \n" + objectMapper.enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(response.body().get()));
-            return response.body().get();
-        } catch (IOException e) {
-            System.out.println("Error in sendAndGetJson");
-            e.printStackTrace();
-            return null;
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static <W> HttpResponse.BodySubscriber<Supplier<W>> asJson(Class<W> targetType) {
-        HttpResponse.BodySubscriber<InputStream> upstream = HttpResponse.BodySubscribers.ofInputStream();
-        return HttpResponse.BodySubscribers.mapping(
-                upstream,
-                inputStream -> () -> {
-                    try (InputStream stream = inputStream) {
-                        ObjectMapper objectMapper = new ObjectMapper();
-                        return objectMapper.readValue(stream, targetType);
-                    } catch (IOException e) {
-                        System.out.println("Error in asJson");
-                        e.printStackTrace();
-                        return null;
-                    }
-                });
-    }
-    static class JsonBodyHandler<W> implements HttpResponse.BodyHandler<Supplier<W>> {
-        private final Class<W> wClass;
-
-        public JsonBodyHandler(Class<W> wClass) {
-            this.wClass = wClass;
-        }
-
-        @Override
-        public HttpResponse.BodySubscriber<Supplier<W>> apply(HttpResponse.ResponseInfo responseInfo) {
-            return asJson(wClass);
-        }
-
-    }
-
-    private String CreateJsonBody(String name){
+    private String createJsonBody(String name, String regionId){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             MyServerlessContainer jsonData = new MyServerlessContainer(
                     "b1ggaqs441crdco4j4it",
-                    "ru-central1",
+                    regionId,
                     name
             );
             return objectMapper.writeValueAsString(jsonData);
@@ -126,16 +65,16 @@ public class ScmTest {
     }
 
     @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-    public static class ResponseBobyServerlessContainer1 {
+    public static class ResponseBobyServerlessContainer {
         private Boolean done;
-        private Metadata1 metadata;
+        private Metadata metadata;
         private String id;
         private String description;
         private String createdAt;
         private String createdBy;
         private String modifiedAt;
 
-        public static class Metadata1 {
+        public static class Metadata {
             @JsonProperty("@type")
             private String type;
             private String containerId;
@@ -165,11 +104,11 @@ public class ScmTest {
             this.done = done;
         }
 
-        public Metadata1 getMetadata() {
+        public Metadata getMetadata() {
             return metadata;
         }
 
-        public void setMetadata(Metadata1 metadata) {
+        public void setMetadata(Metadata metadata) {
             this.metadata = metadata;
         }
 
@@ -214,4 +153,64 @@ public class ScmTest {
         }
     }
 
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+    public static class ContainerInfo {
+        private String id;
+        private String folderId;
+
+        @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+        private Date createdAt;
+
+        private String name;
+        private String url;
+        private String status;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getFolderId() {
+            return folderId;
+        }
+
+        public void setFolderId(String folderId) {
+            this.folderId = folderId;
+        }
+
+        public Date getCreatedAt() {
+            return createdAt;
+        }
+
+        public void setCreatedAt(Date createdAt) {
+            this.createdAt = createdAt;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+    }
 }
